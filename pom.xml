@@ -10,8 +10,29 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <mindmapsgraph.version>0.0.5-SNAPSHOT</mindmapsgraph.version>
+        <mindmapsgraph.version>0.0.4-SNAPSHOT</mindmapsgraph.version>
     </properties>
+
+    <repositories>
+        <!-- Internal mirror of all public repositories -->
+        <repository>
+            <id>public</id>
+            <url>http://maven.internal.mindmaps.io:8082/nexus/content/groups/public</url>
+        </repository>
+
+        <!-- Internal snapshot repository -->
+        <repository>
+            <id>development-snapshots</id>
+            <url>http://maven.internal.mindmaps.io:8082/nexus/content/repositories/development-snapshots</url>
+        </repository>
+
+        <!-- Internal release repository -->
+        <repository>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>http://maven.internal.mindmaps.io:8082/nexus/content/repositories/releases/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
